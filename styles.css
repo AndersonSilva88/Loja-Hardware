@@ -16,7 +16,8 @@ html {
     margin: 0 auto;
 }
 
-header {
+header,
+footer {
     background-color: rgb(13, 163, 138);
     padding-top: 16px;
     color: #fff;
@@ -29,7 +30,8 @@ header {
     z-index: 1;
 }
 
-header>.container {
+header>.container,
+footer>.container {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
@@ -85,23 +87,29 @@ section h2 {
     margin-bottom: 4px;
 }
 
-.lista-produtos li {
-    list-style: none;
-    max-width: 30%;
-    margin-bottom: 24px;
+.conteudo {
+    display: grid;
+    grid-template-columns: 100%;
 }
 
-.lista-produtos li img {
+.produto img {
     max-width: 100%;
 }
 
-.lista-produtos li h3 {
+.produto h3 {
     margin: 16px 0;
 }
 
-.lista-produtos {
-    flex-wrap: wrap;
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
 
+.preco {
+    margin: 16px 0;
+    display: block;
 }
 
 button {
@@ -109,11 +117,25 @@ button {
     width: 100%;
     padding: 8px 0;
     border: none;
-    background-color: blue;
+    background-color: rgb(136, 247, 195);
+    ;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
     font-style: normal;
     cursor: pointer;
     border-radius: 6px;
+}
+
+.clear {
+    clear: both;
+}
+
+.social-media img {
+    height: 50px;
+}
+
+.social-media li {
+    display: inline;
+
 }
