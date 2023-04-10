@@ -139,3 +139,69 @@ button {
     display: inline;
 
 }
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .produtos {
+        display: block;
+    }
+
+    #sobre-a-loja .container {
+        display: block;
+    }
+
+    #sobre-a-loja img {
+        max-width: 100%;
+        margin-right: 0;
+
+    }
+
+    .produto img {
+        margin-right: 0;
+    }
+
+    .produto a {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .produtos .produto {
+        margin-bottom: 32px;
+    }
+
+    header div.container {
+        flex-direction: column;
+    }
+
+    .menu-hamburguer span {
+        display: block;
+        justify-content: center;
+        margin-top: 4px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .produto {
+        font-size: 1.5em;
+    }
+
+    div.produtos {
+        margin-bottom: 50px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+}
