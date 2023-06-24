@@ -23,12 +23,28 @@ footer {
     color: #fff;
 }
 
-header {
+header .container {
     position: sticky;
     top: 0;
     left: 0;
     z-index: 1;
+    display: flex;
 }
+
+header div.container li {
+    display: inline;
+    list-style: none;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .container li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 
 header>.container,
 footer>.container {
@@ -37,20 +53,25 @@ footer>.container {
     padding-bottom: 16px;
 }
 
-nav {
-    background-color: rgb(136, 247, 195);
-    padding: 16px 0;
-    display: none;
+
+header nav .container {
+    display: flex;
 }
+
 
 nav li {
     list-style: none;
-    display: inline;
+    display: none;
     margin-right: 16px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 }
+
+nav {
+    display: none;
+}
+
 
 nav li a {
     color: #fff;
@@ -72,19 +93,6 @@ section {
 
 section h2 {
     margin-bottom: 16px;
-}
-
-.menu-hamburguer {
-    width: 32px;
-    cursor: pointer;
-}
-
-.menu-hamburguer span {
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 4px;
 }
 
 .conteudo {
@@ -118,13 +126,13 @@ button {
     padding: 8px 0;
     border: none;
     background-color: rgb(136, 247, 195);
-    ;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
     font-style: normal;
     cursor: pointer;
     border-radius: 6px;
+
 }
 
 .clear {
@@ -153,14 +161,32 @@ button {
         display: block;
     }
 
+    .menu {
+        display: none;
+    }
+
     #sobre-a-loja .container {
         display: block;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    h2 {
+        margin-top: 1em;
     }
 
     #sobre-a-loja img {
         max-width: 100%;
         margin-right: 0;
 
+    }
+
+    nav {
+        background-color: rgb(136, 247, 195);
+        padding: 16px 0;
+        display: flex;
     }
 
     .produto img {
@@ -172,12 +198,27 @@ button {
         font-size: 1.5em;
     }
 
+    footer {
+        font-size: 8px;
+        display: flex;
+    }
+
     .produtos .produto {
         margin-bottom: 32px;
     }
 
-    header div.container {
-        flex-direction: column;
+
+    .menu-hamburguer {
+        width: 32px;
+        cursor: pointer;
+    }
+
+    .menu-hamburguer span {
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        margin-bottom: 4px;
     }
 
     .menu-hamburguer span {
@@ -203,5 +244,10 @@ button {
     .produtos {
         grid-template-columns: repeat(2, 49%);
     }
+
+    .produto img {
+        max-height: 395px;
+    }
+
 
 }
